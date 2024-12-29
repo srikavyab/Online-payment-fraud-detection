@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Payment Fraud Detection</title>
+    
+    <style>
+        body {
+            background-image: url('https://www.prodwaregroup.com/wp-content/uploads/2021/04/customer-360-data-driven-marketing-2560x1069.jpg');
+            background-size: cover; 
+            background-position: center; 
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .container {
+            width: 500px;
+            margin: 40px auto;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.9); 
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-submit-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0070ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="form-title">Online Payment Fraud Detection</h1>
+        <form action="/submit-form" method="post" class="form">
+           <div class="form-group">
+                <label for="type">Transaction Type:</label>
+                <select class="form-control" id="type" name="type" required>
+                    <option value="" disabled selected>Select transaction type</option>
+                    <option value="0">CASH_IN</option>
+                    <option value="1">CASH_OUT</option>
+                    <option value="2">DEBIT</option>
+                    <option value="3">PAYMENT</option>
+                    <option value="4">TRANSFER</option>
+                </select>
+           </div>
+
+           <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" class="form-control" id="amount" name="amount" placeholder="Enter transaction amount" required>
+           </div>
+
+           <div class="form-group">
+                <label for="oldBalanceOrg">Old Balance (Origin):</label>
+                <input type="number" class="form-control" id="oldBalanceOrg" name="oldBalanceOrg" placeholder="Balance before transaction" required>
+           </div>
+
+           <div class="form-group">
+                <label for="newBalanceOrg">New Balance (Origin):</label>
+                <input type="number" class="form-control" id="newBalanceOrg" name="newBalanceOrg" placeholder="Balance after transaction" required>
+           </div>
+
+           <!-- Phone Number Input -->
+           <div class="form-group">
+                <label for="phone">Phone Number:</label> <!-- Phone number input field -->
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="+1234567890" required pattern="[+][0-9]{10,15}">
+           </div>
+
+           <button type="submit" class="form-submit-button">Submit</button>
+       </form>
+   </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Payment Fraud Detection Result</title>
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/premium-vector/financial-management-concept-investment-banner-template-payment-with-money_33771-1040.jpg'); /* Background image */
+            background-size: cover; 
+            background-position: center; 
+            font-family: "Arial", sans-serif;
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+        }
+
+        h1 {
+            text-align: center;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 36px;
+            color: #00796b; 
+            margin-bottom: 20px;
+        }
+
+        .result-container {
+            background-color: rgba(255, 255, 255, 0.9); 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            padding: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 500px; 
+            opacity: 0; 
+            transform: scale(0.8); 
+            transition: opacity 0.5s ease, transform 0.5s ease; 
+        }
+
+        .result-container.show {
+            opacity: 1; 
+            transform: scale(1); 
+        }
+
+        .result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .fraudulent {
+            color: red; 
+        }
+
+        .non-fraudulent {
+            color: green; 
+        }
+
+        button {
+            background-color: #00796b; 
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px; 
+            cursor: pointer;
+            border-radius: 5px; 
+            border: none; 
+        }
+
+        button:hover {
+            background-color: #005f51; 
+        }
+
+        .result-image {
+            width: 100%; 
+            max-width: 300px; 
+            margin-top: 20px; 
+            opacity: 0; 
+            transition: opacity 0.5s ease; 
+        }
+
+        .result-image.show {
+            opacity: 1; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Online Payment Fraud Detection</h1>
+    <div class="result-container" id="resultContainer">
+        <p>The predicted fraud for the online payment is:</p>
+        <h2 class="result {{ result_class }}">{{ result }}</h2> 
+        
+        <img id="resultImage" class="result-image" src="{{ image_url }}" alt="Result Image"> 
+    </div>
+    <button onclick="location.href='/predict'">Back to Form</button>
+    
+    <script>
+        window.onload = function() {
+           document.getElementById('resultContainer').classList.add('show');
+           
+           const resultImage = document.getElementById('resultImage');
+           
+           if (resultImage) {
+               resultImage.classList.add('show');
+           }
+       };
+    </script>
+</body>
+</html>

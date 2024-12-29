@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Payment Fraud Detection</title>
+    <style>
+        body {
+            background-image: url('https://news.cgtn.com/news/3149544e7949544e3167444f3055444d3555444f31457a6333566d54/img/5646e9c3ccd6450dab859e4acc529ca6/5646e9c3ccd6450dab859e4acc529ca6-1.jpg'); /* Background image */
+            background-size: cover; 
+            background-position: center; 
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; 
+            height: 100vh; 
+        }
+
+        #top-button {
+            text-align: right;
+            padding: 20px; 
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px; 
+            font-size: 36px;
+            color: #f5f8f8; 
+        }
+
+        p {
+            text-align: center;
+            font-size: 20px;
+            margin: 20px; 
+        }
+
+        button {
+            background-color: #070c0b; 
+            color: white;
+            padding: 15px 30px; 
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px; 
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px; 
+            border: none;
+        }
+
+        #predict-button-container {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            flex-grow: 2; 
+        }
+    </style>
+</head>
+<body>
+    <div id="top-button">
+        <button onclick="location.href='/'">Home</button>
+    </div>
+
+    <h1>ONLINE PAYMENT FRAUD DETECTION</h1>
+
+    <p>
+        Online payment fraud detection is a critical aspect of ensuring the integrity of digital transactions.
+        As online transactions continue to grow in volume and popularity, the risk of fraudulent activities also increases.
+    </p>
+
+    <div id="predict-button-container">
+        <form action="/predict" method="get">
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
